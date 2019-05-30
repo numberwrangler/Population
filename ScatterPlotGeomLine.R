@@ -8,6 +8,7 @@ a + geom_point(aes(y = Age4, col= "Age4"))+
   geom_point(aes(y=Age14, col="Age14"))+
   geom_line(aes(y=Age14, col="Age14"))+
   geom_point(aes(y=Age19, col="Age19"))+
-  geom_line(aes(y=Age19, col="Age19"))
+  geom_line(aes(y=Age19, col="Age19")) +
+  ylab("Ages")
 
 str(dataset)
