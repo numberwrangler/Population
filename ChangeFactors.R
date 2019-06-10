@@ -1,11 +1,14 @@
 # ALways good to have a backup
 dataset.backup <- dataset
 dataset = dataset.backup
+# Took about 41 lines of code to 1 line
+dataset <- apply(dataset, 2, function(y) as.numeric(gsub(" ", "", y)))
+str(dataset)
+summary(dataset)
 # Need to remove spaces and commas before changing factors
-for (i in colnames(dataset)){
-  dataset[,i] <- gsub(" ","", dataset[,i])
-}
-
+#for (i in colnames(dataset)){
+  #dataset[,i] <- gsub(" ","", dataset[,i])
+#}
 # Old code reduced to code above
 # dataset$Age4 <- gsub(" ","", dataset$Age4)
 # dataset$Age9 <- gsub(" ","", dataset$Age9)
@@ -30,12 +33,12 @@ for (i in colnames(dataset)){
 # dataset$Age99 <- gsub(" ","", dataset$Age99)
 
 # check to make sure that the columns are either Num or Chr
-str(dataset)
+#str(dataset)
 
 # Set as Num new code
-for (i in colnames(dataset)){
-  dataset[,i] <- as.numeric(dataset[,i])
-}
+#for (i in colnames(dataset)){
+#  dataset[,i] <- as.numeric(dataset[,i])
+#}
 
 # This is the old code
 # dataset$Age4 <- as.numeric(dataset$Age4)
