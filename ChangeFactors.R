@@ -2,7 +2,7 @@
 dataset.backup <- dataset
 dataset = dataset.backup
 # Took about 41 lines of code to 1 line
-dataset <- apply(dataset, 2, function(y) as.numeric(gsub(" ", "", y)))
+dataset <- as.data.frame(lapply(dataset, function(y) as.numeric(gsub(" ", "",y))))
 str(dataset)
 summary(dataset)
 # Need to remove spaces and commas before changing factors
