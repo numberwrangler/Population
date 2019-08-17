@@ -2,14 +2,5 @@
 
 Data is from https://esa.un.org/unpd/wpp/Download/Standard/Population/
 
-Order of running
+To run the program just take the PopulationMain and the dataset.
 
-1st ImportPopulation
-
-2nd Checks
-
-3rd ChangeFactors
-
-4th Age80Fix
-
-5th FixRestNA
